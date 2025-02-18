@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        body{
+            background-color: rgb(170, 16, 216);
+            align-items: center;
+            
+          
+        
+            
+        }
+        .container{
+          display: flexbox;
+          justify-content:center;
+          width:500px;
+          height: 300px;
+          align-self: center;
+          align-content: center;
+          border-radius: 50px;
+        background-color:white;
+       
+       
+       
+       
+        }
+
+
+        input{
+            width:50%;
+            padding: 15px;
+            color: black;
+            
+            
+        }
+        h2{
+            color: rgb(123, 17, 155);
+        }
+     button{
+            padding:15px;
+            background-color:rgb(170, 16, 216) ;
+            color:aliceblue;
+        }
+        .items{
+            text-align:center ;
+        }
+        #dates{
+            background-color:white ;
+           padding: 10px;
+           width: 20%;
+           color: white;
+           background-color:rgb(170, 16, 216) 
+            
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="items" ><h2>TO DO LIST 📝</h2>
+  <input type="text" id="input" placeholder="Create your task here .">
+  <input type="date" id="dates" placeholder="📆">
+    <button onclick="add()">ADD</button>
+    <ol id="list-container">
+    </ol>
+</div>
+</div>
+    <script>
+        var ol=document.getElementById("list-container")
+        var input=document.getElementById("input")
+        var calendar=document.getElementById("dates")
+        
+        function add(){
+            var listitem=document.createElement('list-container')
+            var datee=document.createElement('dates')
+            listitem.innerHTML=input.value +"                 "+dates.value +  "            "  +"<button onclick='deleteItem(event)'>Clear</button>"
+            input.value=""
+
+
+            
+            ol.append(listitem)
+            
+        }
+        
+        function deleteItem(event){
+            event.target.parentElement.remove()
+        }
+    </script>
+</body>
+</html>
